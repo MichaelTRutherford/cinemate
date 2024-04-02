@@ -1,0 +1,38 @@
+API Key: cbe347f17be32a60035fd95624275092
+API Read Access Token: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYmUzNDdmMTdiZTMyYTYwMDM1ZmQ5NTYyNDI3NTA5MiIsInN1YiI6IjY0YTdjZDIxYWYyZGE4MDBjYTU4NTU2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QsGKxC_dXHUFba5He811cBeAvC69TkiHm3dmG5KRmO8
+
+const url = 'https://api.themoviedb.org/3/movie/movie_id?language=en-US';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYTg0ZTgxNzA3NTllYjA2MTljZDMyNTU1ZTQ4MWNkNSIsInN1YiI6IjY0YTdjZDIxYWYyZGE4MDBjYTU4NTU2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sxcIRqa5n-hVrEDmAlsig174NrmgPDUYpu5jRZvhS6Q'
+  }
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error('error:' + err));
+
+
+
+Base URL: https://api.themoviedb.org/3
+
+Individual:
+https://api.themoviedb.org/3/movie/{movie_id}
+
+Now Playing:
+https://api.themoviedb.org/3/movie/now_playing
+
+Popular:
+https://api.themoviedb.org/3/movie/popular
+
+Top Rated:
+https://api.themoviedb.org/3/movie/top_rated
+
+Upcoming: 
+https://api.themoviedb.org/3/movie/upcoming
+
+Search:
+https://api.themoviedb.org/3/search/movie?query={movie_name}
